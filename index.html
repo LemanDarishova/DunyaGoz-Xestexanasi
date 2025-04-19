@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dünyagöz - Göz Sağlamlığı Mərkəzi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- YUXARI PANEL (TOP BAR) BÖLMƏSI -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="#" class="appointment-btn">İndi Axtar</a>
+                <span class="contact-info">*4469 - 365 GÜN, 24 SAAT DAİMİ XİDMƏT</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a href="#" class="doctor-btn">Həkim Qəbuluna Yazıl</a>
+                <div class="language-selector">
+                    <select>
+                        <option value="az">Azerbaijan</option>
+                    </select>
+                </div>
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ƏSAS NAVİQASİYA (MAIN NAVIGATION) BÖLMƏSI -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="https://www.dunyagoz.az//uploads/iconset/logo2.png" alt="Dünyagöz Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">HAQQIMIZDA</a></li>
+                    <li><a href="#">TİBBİ BÖLMƏLƏR</a></li>
+                    <li><a href="#">HƏKİMLƏR</a></li>
+                    <li><a href="#">FİLİALLARIMIZ</a></li>
+                    <li><a href="#">TİBBİ TURİZM</a></li>
+                    <li><a href="#">ƏLAQƏ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- QƏHRƏMAN (HERO) BÖLMƏSI -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+            
+            </div>
+            <div class="hero-image">
+                <!-- Şəkil arxa planda CSS ilə göstəriləcək -->
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AXTARIŞ (SEARCH) BÖLMƏSI -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" placeholder="Tapmaq istədiyiniz sözü daxil edin">
+                <button class="search-submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- RANDEVU (APPOINTMENT) BÖLMƏSI -->
+    <section class="appointment-section">
+        <div class="container">
+            <div class="appointment-header">
+                <h2>Randevunuzu Təxirə Salmayın!</h2>
+                <p>Sizə Ən Yaxın Filialın Tapmaq Üçün Yerləşməyinizi Öyrənməyimizə icazə Verərdiniz.</p>
+            </div>
+            
+            <div class="appointment-content">
+                <div class="appointment-info">
+                    <div class="info-card">
+                        <h3>Randevunuzu Təxirə Salmayın!</h3>
+                        <div class="card-divider"></div>
+                        <p>Gözün bütün Budaqlarında Yüzlərlə Fərqli Müalicə Üsulu ilə Xidmətinizdəyik.</p>
+                    </div>
+                </div>
+                
+                <div class="appointment-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Adınız</label>
+                            <input type="text" id="name" placeholder="Adınız">
+                        </div>
+                        <div class="form-group">
+                            <label for="surname">Soyadınız</label>
+                            <input type="text" id="surname" placeholder="Soyadınız">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefon Nömrəsi</label>
+                            <input type="tel" id="phone" placeholder="Telefon Nömrəsi">
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Göndər</label>
+                            <select id="gender">
+                                <option value="">Göndər</option>
+                                <option value="male">Kişi</option>
+                                <option value="female">Qadın</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="submit-btn">Davam Et...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COOKIE CONSENT BÖLMƏSI -->
+    <div class="cookie-consent">
+        <div class="container">
+            <p>Xidmətlərimizdən maksimum yararlanmaq üçün çərəzlərdən istifadə edirik. www.dunyagoz.com'a daxil olmaqla, çərəzlərin istifadəsinə razılıq verirsiniz.</p>
+            <div class="cookie-actions">
+                <a href="#" class="more-info">Daha Fazla Bilgi Al</a>
+                <button class="accept-btn">Anladım</button>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+
+<!-- FİLİALLARIMIZ BÖLMƏSİ -->
+<section class="branches-section">
+    <div class="container">
+        <div class="branches-header">
+            <h2>FİLİALLARIMIZ</h2>
+            <p>Türkiyədə 21, xaricdə isə 9 yerdə göz sağlamlığı xidmətləri təqdim edirik.</p>
+        </div>
+        
+        <div class="branches-grid">
+            <div class="branch-item">
+                <h3>Bakü</h3>
+                <div class="branch-card">
+                    <img src="https://www.dunyagoz.az//uploads/merkezlerimiz/baku-boyutlanmis-resim.jpg" alt="Dünyagöz Bakü Filialı">
+                </div>
+            </div>
+            
+            <div class="branch-item">
+                <h3>İstanbul - Etiler</h3>
+                <div class="branch-card">
+                    <img src="https://www.dunyagoz.az///uploads/merkezlerimiz/f6170697-36aa-48fc-a958-2dc2ac59dee5_17c7a887-4251-4cac-84d6-970c56ccd2bd_etiler-small-2.jpg" alt="Dünyagöz İstanbul Etiler Filialı">
+                </div>
+            </div>
+            
+            <div class="branch-item">
+                <h3>İstanbul - Ataköy</h3>
+                <div class="branch-card">
+                    <img src="https://www.dunyagoz.az///uploads/merkezlerimiz/5c3a8c23-c6ff-4fb0-9f4f-52cc979e3cf0_2ab6e29a-03b2-444d-b60c-2f63da856628_atakoy_small.jpg" alt="Dünyagöz İstanbul Ataköy Filialı">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#" class="back-to-top">Başa Dön</a>
+</section>
+
+    <!-- TİBBİ BÖLMƏLƏR BÖLMƏSİ -->
+    <section class="medical-departments-section">
+        <div class="container">
+            <div class="medical-header">
+                <div>
+                    <h2>TİBBİ BÖLMƏLƏR</h2>
+                    <p>Tibbi şöbələrimiz ilə bir dəfə göz müayinəsindən keçməyinizə laqeyd yanaşmayın!</p>
+                </div>
+                <a href="#" class="btn-departments">Tibbi Bölmələrimiz <i class="fas fa-chevron-right"></i></a>
+            </div>
+            
+            <div class="featured-departments">
+                <div class="department-card">
+                    <img src="https://www.dunyagoz.az///uploads/tibbi-birimlerimiz/Katarakt_2017.jpg" alt="Katarakta">
+                    <div class="department-title">KATARAKTA</div>
+                </div>
+                
+                <div class="department-card">
+                    <img src="https://www.dunyagoz.az///uploads/tibbi-birimlerimiz/lazer.jpg" alt="Lazer və Gözdaxili Linza">
+                    <div class="department-title">LAZER VƏ GÖZDAXİLİ LİNZA</div>
+                </div>
+                
+                <div class="department-card">
+                    <img src="https://www.dunyagoz.az///uploads/tibbi-birimlerimiz/Retina_2017.jpg" alt="Torlu Qişa">
+                    <div class="department-title">TORLU QİŞA</div>
+                </div>
+                
+                <div class="department-card">
+                    <img src="https://www.dunyagoz.az///uploads/tibbi-birimlerimiz/cocuk-goz-sagligi.jpg" alt="Uşaq Göz Sağlamlığı">
+                    <div class="department-title">UŞAQ GÖZ SAĞLAMLIĞI</div>
+                </div>
+            </div>
+            
+            <div class="department-buttons">
+                <a href="#" class="dept-btn">ÜMUMİ GÖZ MÜAYİNƏSİ</a>
+                <a href="#" class="dept-btn">KATARAKTA</a>
+                <a href="#" class="dept-btn">LAZER VƏ GÖZDAXİLİ LİNZA</a>
+                <a href="#" class="dept-btn">YAXIN GÖRMƏ PROBLEMLƏRİ</a>
+                <a href="#" class="dept-btn">TORLU QİŞA</a>
+                <a href="#" class="dept-btn">GÖZ TƏZYİQİ (QLAUKOMA)</a>
+                <a href="#" class="dept-btn">UŞAQ GÖZ SAĞLAMLIĞI</a>
+                <a href="#" class="dept-btn">ÇƏPGÖZLÜK</a>
+                <a href="#" class="dept-btn">GÖZ TƏNBƏLLİYİ (AMBLİOPİYA)</a>
+                <a href="#" class="dept-btn">GÖZ ESTETİKASI (OKULOPLASTİKA)</a>
+                <a href="#" class="dept-btn">BUYNUZ QİŞA XƏSTƏLİKLƏRİ</a>
+                <a href="#" class="dept-btn">NEYRO-OFTALMOLOGİYA</a>
+                <a href="#" class="dept-btn">GÖZDAXİLİ İLTİHABLAR</a>
+                <a href="#" class="dept-btn">KONTAKT LİNZALAR</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TƏTBİQ YÜKLƏMƏ BÖLMƏSİ -->
+    <section class="app-download-section">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-image">
+                    <img src="https://dunyagoz.az/images/index/app.png" alt="Dünyagöz Mobil Tətbiqi">
+                </div>
+                
+                <div class="app-info">
+                    <h2>Dünyagöz Tətbiqini Yükləyin</h2>
+
+                    <p>Dünyagözün mütəxəssis həkim heyətinə çatmaq indi çox asandır. Tətbiq vasitəsi ilə bütün həkimlərimizə, 
+                        filiallarımıza və sosial media hesablarımıza daxil ola və onlayn randevu istəyə bilərsiniz.</p>
+                    
+                    <p class="app-download-text">Tətbiqi yükləmək üçün linki əldə edin.</p>
+                    
+                    <div class="app-stores">
+                        <div class="store">
+                            <h3>Play Store</h3>
+                            <img src="https://dunyagoz.az/images/index/android-qr.jpg" alt="Play Store QR Kodu" class="qr-code">
+                        </div>
+                        
+                        <div class="store">
+                            <h3>Apple Store</h3>
+                            <img src="https://dunyagoz.az/images/index/apple-qr.jpg" alt="Apple Store QR Kodu" class="qr-code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER BÖLMƏSİ -->
+<footer class="footer-section">
+
+    <!-- E-BÜLTEN ÜYELİYİ -->
+    <div class="newsletter-section">
+        <div class="container">
+            <h2 class="newsletter-title">E-Bülten Üyeliği</h2>
+            
+            <div class="newsletter-form">
+                <input type="email" placeholder="E-poçt ünvanınızı daxil edin" class="newsletter-input">
+                <button class="newsletter-btn">Göndər</button>
+            </div>
+            
+            <div class="form-check">
+                <input type="checkbox" id="newsletter-consent">
+                <label for="newsletter-consent">Dünyagöz Xəstəxanalar Qrupunun xidmətləri və elanları haqqında 
+                                                məlumat almaq üçün şəxsi məlumatlarımın istifadəsinə və əlaqə saxlanılmasına razılıq verirəm.
+                </label>
+            </div>
+            
+            <div class="recaptcha">
+                <!-- Google reCAPTCHA -->
+                <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FOOTER NAVİQASİYA -->
+    <div class="footer-nav">
+        <div class="container">
+            <div class="footer-nav-grid">
+                <div class="footer-nav-item">XƏBƏRLƏR</div>
+                <div class="footer-nav-item">GÖRMƏ TESTLƏRİ</div>
+                <div class="footer-nav-item">MEDİKAL TEXNOLOGİYA</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FOOTER MƏLUMAT -->
+    <div class="footer-info">
+        <div class="container">
+            <div class="footer-info-content">
+                <div class="footer-text">
+                    <h3>365 gün, 24 saat fasiləsiz xidmət</h3>
+                    <p>Dünyagöz Xəstəxanalar Qrupu Veb Saytı, məzmunu və təbliğləri yalnız məlumat və təhsil məqsədidir və hər hansı bir tibbi məsləhət vermək və ya hər hansı bir həkim-xəstəyə təminat vermək məqsədi ilə yaradılmamışdır.</p>
+                    <p>Unutmayın ki, buradakı məlumatlar həkim müayinəsi və həkim konsultasiyası nəticəsində verilən məlumatlarla müqayisə edilə bilməz. Mənbələrdə ifadə olunan fikirlər, açıq şəkildə ifadə edilmədiyi təqdirdə Dünyagöz Xəstəxanalar Qrupunun rəsmi fikirlərinə əks etdirmir. Web sayt məzmunu sitat göstərilmədən kopyalana və ya paylaşıla bilməz.</p>
+                    <p>Dünyagöz Hastaneler Grubu 2024</p>
+                </div>
+                <div class="footer-logo">
+                    <img src="https://www.dunyagoz.az//uploads/iconset/logo2.png" alt="Dünyagöz Logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#" class="back-to-top">Başa Dön</a>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
