@@ -160,10 +160,13 @@ ul {
 .main-nav ul {
     display: flex;
     padding-right: 0; /* Sağ tərəfdən boşluğu azaltdım */
+    list-style: none;
+    margin: 0;
 }
 
 .main-nav li {
     margin-left: 25px; /* Menyu elementləri arasındakı məsafəni artırdım */
+    position: relative;
 }
 
 .main-nav a {
@@ -171,12 +174,240 @@ ul {
     font-size: 14px;
     font-weight: 500; /* Şriftin qalınlığını azaltdım */
     transition: color 0.3s ease;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
 }
 
 .main-nav a:hover {
     color: #e05e11; /* Hover zamanı rəng dəyişməsi */
 }
 
+/* DROPDOWN MENYU STILLƏR - DÜZƏLİŞ */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+    border-top: 4px solid #666;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    transition: transform 0.3s ease;
+}
+
+.has-dropdown.active .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 200px;
+    display: none;
+    border-radius: 4px;
+    overflow: visible; 
+}
+
+/* TİBBİ BÖLMƏLƏR ÜÇÜN DROPDOWN MÖVQE DÜZƏLİŞİ */
+.main-nav ul li:last-child .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+.has-dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-content {
+    padding: 10px 0;
+    background-color: white;
+    border-radius: 4px; 
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    color: #333 !important;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    background-color: transparent; 
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+    color: #e05e11 !important;
+}
+
+.arrow-icon {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #e05e11;
+    border-right: 2px solid #e05e11;
+    transform: rotate(45deg);
+    margin-right: 8px;
+}
+/* TİBBİ BÖLMƏLƏR ÜÇÜN GENİŞ DROPDOWN */
+.dropdown-columns {
+    display: flex;
+    width: 600px;
+    background-color: white; /* Əlavə edildi */
+    border-radius: 4px; /* Əlavə edildi */
+}
+
+/* TİBBİ BÖLMƏLƏR DROPDOWN MÖVQE DÜZƏLİŞİ */
+.main-nav ul li:last-child .dropdown-columns {
+    position: relative;
+    right: 300px; /* Dropdown menyusunu sola doğru sürüşdürürük */
+}
+.dropdown-column {
+    flex: 1;
+    padding: 0;
+    background-color: white; /* Əlavə edildi */
+}
+
+/* MOBİL MENYU TOGGLE */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle span:nth-child(1) {
+    top: 0;
+}
+
+.mobile-menu-toggle span:nth-child(2) {
+    top: 9px;
+}
+
+.mobile-menu-toggle span:nth-child(3) {
+    top: 18px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+}
+
+/* RESPONSİV STILLƏR - DROPDOWN ÜÇÜN */
+@media (max-width: 992px) {
+    .dropdown-columns {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .dropdown-column {
+        padding: 0;
+    }
+    
+    .dropdown-menu {
+        width: 250px;
+    }
+    
+    /* TİBBİ BÖLMƏLƏR DROPDOWN MÖVQE DÜZƏLİŞİ - TABLET */
+    .main-nav ul li:last-child .dropdown-columns {
+        right: 150px; /* Tablet üçün daha az sürüşdürmə */
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .main-nav {
+        margin-left: 0;
+    }
+    
+    .main-nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 0;
+        display: none;
+        z-index: 999;
+    }
+    
+    .main-nav.active ul {
+        display: block;
+    }
+    
+    .main-nav li {
+        margin: 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .main-nav a {
+        padding: 15px 20px;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-top: 1px solid #eee;
+        border-radius: 0;
+    }
+    
+    .dropdown-columns {
+        width: 100%;
+    }
+    
+    .dropdown-item {
+        padding: 10px 30px;
+    }
+    
+    /* TİBBİ BÖLMƏLƏR DROPDOWN MÖVQE DÜZƏLİŞİ - MOBİL */
+    .main-nav ul li:last-child .dropdown-columns {
+        right: 0; /* Mobil üçün sürüşdürməni sıfırlayırıq */
+    }
+}
 /* QƏHRƏMAN (HERO) BÖLMƏSI STILLƏR */
 .hero-banner {
     position: relative;
